@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Progress Bar</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href=/stylesheets/main.css></link>
+        <style>
+        hr {
+          height: 30px;
+          border-style: solid;
+          border-width: 1px 0 0 0;
+          border-radius: 20px;
+        }
+        hr:before {
+          display: block;
+          content: "";
+          height: 30px;
+          margin-top: -31px;
+          border-style: solid;
+
+          border-width: 0 0 1px 0;
+          border-radius: 20px;
+          }
+            .white{
+              border-color: #FFFFFF;
+            }
+            .black{
+              border-color: #8c8b8b;
+            }
+        </style>
+    </head>
+    <body>
+
+      <div class="container">
+        <div class="jumbotron mt-5">
+          <h1 class = "display-4"><strong>Progress Bar</strong></h1>
+          <p class="lead">A progress bar can be defined as the graphical control element that can be used to pictorially represent the progression of a computer operation,such as a download,file transfer,or installation.The graphic can be added with a textual representation of progress in a percent format.The progress of the task is conveyed by the progress bar,but it does not define the progress.
+          </p>
+        </div>
+        <div class="card card-block bg-dark text-light p-5">
+          <div class="row">
+            <div class="col-lg-8">
+              <h1 class="display-4">Bootstrap Progress Bar</h1>
+              <p class="lead">Progress bars are built from two html elements,few attributes and some CSS style to set width of the progress bar.
+                Progress bars can also be animated, stacked up and placed labels over them.</p>
+            </div>
+            <div class="col-lg-4">
+              <img class ="pr-5" src="https://d2d3qesrx8xj6s.cloudfront.net/img/screenshots/3c9c6afb4afed6ce8b6b674d6904e87e50468f14.jpg" alt="Image of progress bar">
+            </div>
+          </div>
+          <div class="row pt-5">
+            <div class="col-sm-12">
+              <ul>
+                <div class ="h4">Some of the essential Bootstrap(v4.0.0- Beta) classes to include a progress bar is :</div>
+                <h4 class="lead"><li><strong>"<em>.progress</em>"</strong> -acts as a wrapper to indicate the maximum value of the progress bar.</li></h4>
+                <h4 class="lead"><li><strong>"<em>.progress-bar</em>"</strong> -which is the child of the <strong>".progress"</strong>,is used to indicate the progress so far.</li></h4>
+              </ul>
+            </div>
+            <div class="col-sm-12">
+              <p class="lead">The ".progress-bar" requires additional inline functionality to get it to work like adding inline style,utility class or custom css to set their width.It also requires some of the html elements attributes like <u>'role'</u> and <u>'aria'</u> to make it accessible.
+              </p>
+            </div>
+            <div class="col-sm-12 bg-light pt-3">
+              <code class="text-dark ">
+                <hr class="black">
+                &ltdiv class="progress"&gt<br>
+                  &ltdiv class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt<br>
+                &lt/div&gt<br>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div><br><hr class="black">
+                &ltdiv class="progress"&gt<br>
+                  &ltdiv class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt<br>
+                &lt/div&gt<br>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div><br><hr class="black">
+                &ltdiv class="progress"&gt<br>
+                  &ltdiv class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt<br>
+                &lt/div&gt<br>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div><br><hr class="black">
+                &ltdiv class="progress"&gt<br>
+                  &ltdiv class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt<br>
+                &lt/div&gt<br>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div><br><hr class="black">
+                &ltdiv class="progress"&gt<br>
+                  &ltdiv class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt<br>
+                &lt/div&gt<br>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div><br><hr class="black">
+              </div>
+              </code>
+          </div>
+        </div>
+        <div class="jumbotron mt-5">
+          <p class="lead text-faded">
+            <strong>
+              Bootstrap also allows us to add and manipulate the certain feautures like adding labels to the progress bar,adjusting the height,setting various background,stacking up the bars(multiple bars),Striped progress bar and lastly giving animations to the striped Bar.
+            </strong>
+          </p>
+          <h3 class="display-4"><strong>Height</strong></h3>
+          <p class="lead">The height of the progress bar can be modified using css,we include the style attribute's height property and set it to the value we want.The below code renders a progress bar with height 1px.</p>
+          <div class="row">
+            <div class="col-lg-12 bg-dark">
+              <code class="text-light">
+                <br>
+                &ltdiv class="progress" style=<strong class="text-success">"height: 20px;"</strong>&gt<br>
+                  &ltdiv class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt<br>
+                &lt/div&gt<br><br>
+                <div class="progress" style="height: 20px;">
+                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div><br>
+                &ltdiv class="progress" style=<strong class="text-success">"height: 3px;"</strong>&gt<br>
+                  &ltdiv class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt<br>
+                &lt/div&gt<br><br>
+                <div class="progress" style="height: 3px;">
+                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div><br>
+              </code>
+            </div>
+          </div>
+          <h3 class="display-4 pt-4"><strong>Label</strong></h3>
+          <p class="lead">We can add labels to our progress bars by placing the text within the .progres-bar class.Example code looks as shown below.</p>
+          <div class="row">
+            <div class="col-lg-12 bg-dark">
+              <code class="text-white">
+                <br>
+                &ltdiv class="progress"&gt<br>
+                  &ltdiv class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt25%&lt/div&gt<br>
+                &lt/div&gt<br><br>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div><br>
+              </code>
+            </div>
+
+              <h3 class="display-4 pt-4"><strong>Background</strong></h3>
+              <p class="lead">The background utility class whuch are defined in the bootstrap can be used to change the appearence of the individual progress bars.
+                Some of the most used background utility classes are as follows:
+                <ul class="list-group mx-auto">
+                  <li class ="list-group-item list-group-item-success">.bg-success - Green</li>
+                  <li class ="list-group-item list-group-item-info">.bg-info - Blue</li>
+                  <li class ="list-group-item list-group-item-warning">.bg-warning - Yellow</li>
+                  <li class ="list-group-item list-group-item-danger">.bg-danger - Red</li>
+                </ul>
+              </p>
+              <div class="row mt-3 mx-3">
+                <div class="col-lg-12 bg-dark">
+                <code class="text-light"><hr class="white">
+                  &ltdiv class="progress"&gt<br>
+                    &ltdiv class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt<br>
+                  &lt/div&gt<br><br>
+                  <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div><br><hr class="white">
+                  &ltdiv class="progress"&gt<br>
+                    &ltdiv class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt<br>
+                  &lt/div&gt<br><br>
+                  <div class="progress">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div><br><hr class="white">
+                  &ltdiv class="progress"&gt<br>
+                    &ltdiv class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt<br>
+                  &lt/div&gt<br><br>
+                  <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div><br><hr class="white">
+                  &ltdiv class="progress"&gt<br>
+                    &ltdiv class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt<br>
+                  &lt/div&gt<br>
+                  <br>
+                  <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div><br><hr class="white">
+                </div>
+                </code>
+              </div>
+
+            </div>
+            <p class="display-5 mt-3">
+              Bootstrap also have other features that can be added for progress bar like animations and adding a striped gradient etc,but the once we have discussed above are the one's that are commonly used.
+            </p>
+            <h6>For more information on Progress bar you can read the official documentation of the Bootstrap's Progress Bar.The link to the page is : <a href="https://getbootstrap.com/docs/4.0/components/progress/" target="blank">https://getbootstrap.com/docs/4.0/components/progress/</a></h6>
+            <p class="h3">References</p>
+            <p>Offical Bootstrap Documentation: <a href="https://getbootstrap.com/" target ="blank">https://getbootstrap.com/</a></p>
+          </div>
+        </div>
+
+              <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+</script>
+  </body>
+</html>
